@@ -6,6 +6,12 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 import Logout from './Logout';
 import Dashboard from './Dashboard';
+import Customers from './Customers';
+import Leads from './Leads';
+import Tasks from './Tasks';
+import ServiceRequests from './ServiceRequests';
+import Companies from './Companies';
+import Contacts from './Contacts';
 
 function App() {
   return (
@@ -18,9 +24,17 @@ function App() {
             <Navbar />
             <div className="container-fluid">
               <Routes>
-                <Route path="/" element={<Dashboard />} />
-                <Route path="/dashboard" element={<Dashboard />} />
-               
+                {/* <Route path="/" element={<Dashboard />} />
+                <Route path="/dashboard" element={<Dashboard />} /> */}
+                
+                <Route path="/" element={<Contacts />} />
+                <Route path="/customers" element={<Customers />} />
+                <Route path="/leads" element={<Leads />} />
+                <Route path="/tasks" element={<Tasks />} />
+                <Route path="/service-requests" element={<ServiceRequests />} />
+                <Route path="/companies" element={<Companies />} />
+                <Route path="/contacts" element={<Contacts />} />
+
               </Routes>
             </div>
           </div>
