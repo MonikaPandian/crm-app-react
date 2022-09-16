@@ -3,7 +3,7 @@
 }
 
 .login{
-  margin-top:5%; 
+  margin-top:4%; 
   margin-left:35%; 
   height:500px;
   width:375px;
@@ -34,4 +34,18 @@
 }
 .sign-up-text{
   font-size: medium;
+}
+
+.add-user{
+  display: flex;
+  flex-direction: column;
+  margin-left: 100px;
+  gap: 20px;
+  width:700px; 
+}
+
+.add-button{
+  margin-left:400px !important;
+  margin-top:30px !important;
+  width:200px;
 }

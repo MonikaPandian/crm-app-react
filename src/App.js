@@ -1,11 +1,7 @@
 import './App.css';
-import { Routes, Route} from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import LoginForm from './LoginForm';
-import Sidebar from './Sidebar';
-import Navbar from './Navbar';
-import Footer from './Footer';
-import Logout from './Logout';
-import Dashboard from './Dashboard';
+import New from './New';
 import Customers from './Customers';
 import Leads from './Leads';
 import Tasks from './Tasks';
@@ -13,38 +9,25 @@ import ServiceRequests from './ServiceRequests';
 import Companies from './Companies';
 import Contacts from './Contacts';
 
+import AddCustomers from './AddCustomers';
+import AddLeads from './AddLeads';
+
 function App() {
   return (
-    <div id="page-top">
-      <div id="wrapper">
-        <Sidebar />
-        <div id="content-wrapper" className="d-flex flex-column">
-          {/* <!-- Main Content --> */}
-          <div id="content">
-            <Navbar />
-            <div className="container-fluid">
-              <Routes>
-                {/* <Route path="/" element={<Dashboard />} />
-                <Route path="/dashboard" element={<Dashboard />} /> */}
-                
-                <Route path="/" element={<Contacts />} />
-                <Route path="/customers" element={<Customers />} />
-                <Route path="/leads" element={<Leads />} />
-                <Route path="/tasks" element={<Tasks />} />
-                <Route path="/service-requests" element={<ServiceRequests />} />
-                <Route path="/companies" element={<Companies />} />
-                <Route path="/contacts" element={<Contacts />} />
+    <div>
+      <Routes>
+        <Route path="/" element={<LoginForm />} />
+        <Route path="/new" element={<New />} />
+        <Route path="/customers" element={<Customers />} />
+        <Route path="/add-customer" element={<AddCustomers />} />
+        <Route path="/leads" element={<Leads />} />
+        <Route path="/add-lead" element={<AddLeads />} />
+        <Route path="/tasks" element={<Tasks />} />        
+        <Route path="/service-requests" element={<ServiceRequests />} />
+        <Route path="/companies" element={<Companies />} />
+        <Route path="/contacts" element={<Contacts />} />
+      </Routes>
 
-              </Routes>
-            </div>
-          </div>
-          <Footer />
-        </div>
-      </div>
-      <a className="scroll-to-top rounded" href="#page-top">
-        <i className="fas fa-angle-up"></i>
-      </a>
-      <Logout />
     </div>
   );
 }

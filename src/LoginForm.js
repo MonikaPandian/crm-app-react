@@ -1,8 +1,11 @@
 import React from 'react';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
+import { useNavigate } from 'react-router-dom';
 
 const LoginForm = () => {
+
+    const navigate = useNavigate();
     return (
         <div className='login-page'>
             {/* <!-- As a heading --> */}
@@ -22,8 +25,8 @@ const LoginForm = () => {
                     label="Email" variant="standard" />
                 <TextField onChange=""
                     label="password" className="login-text-password" variant="standard" />
-                <Button className="login-button" onClick=""
-                    variant="contained">Login</Button>
+                <Button className="login-button" 
+                    variant="contained" onClick={()=>{navigate("/new")}}>Login</Button>
                 <p className='sign-up-text'>Don't have an account ? <a href="">Sign Up</a></p>
 
             </div>

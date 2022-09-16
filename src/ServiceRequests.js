@@ -1,62 +1,32 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
-import IconButton from '@mui/material/IconButton';
-import EditIcon from '@mui/icons-material/Edit';
-import DeleteIcon from '@mui/icons-material/Delete';
-import { useNavigate } from 'react-router-dom';
+import Footer from './Footer';
+import Logout from './Logout';
+import Navbar from './Navbar';
+import ServiceRequest from './ServiceRequest';
+import Sidebar from './Sidebar';
 
 const ServiceRequests = () => {
-
-    const [serviceRequests, setServiceRequests] = useState([]);
-    const navigate = useNavigate();
-
-    function getTasks() {
-        fetch("https://customer-relation-manage-app.herokuapp.com/service-requests", {
-            method: "GET"
-        })
-            .then((data) => data.json())
-            .then((res) => setServiceRequests(res))
-            .catch((e) => console.log(e));
-    }
-
-    useEffect(() => getTasks(), []);
-
-    return (
-        <div>
-            <table className="table table-striped">
-                <thead>
-                    <tr>
-                        <th scope="col">Id</th>
-                        <th scope="col">Service Request Name</th>
-                        <th scope="col">Status</th>
-                        <th scope="col">User Responsible</th>                       
-                        <th scope="col">Sevice Category</th> 
-                        <th scope="col">Service Request Created</th>                                             
-                        <th scope="col">Actions</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {serviceRequests.map((service) => {
-                        return (
-                            <tr>
-                                <th scope="row">{service.id}</th>
-                                <td>{service.name}</td>
-                                <td>{service.status}</td>
-                                <td>{service.user_responsible}</td>                             
-                                <td>{service.service_category}</td>
-                                <td>{service.created}</td>                               
-                                <td><IconButton onClick="" color="secondary">
-                                    <EditIcon />
-                                </IconButton>
-                                    <IconButton onClick="" color="error">
-                                        <DeleteIcon />
-                                    </IconButton></td>
-                            </tr>)
-                    })}
-                </tbody>
-            </table>
+    
+  return (
+    <div id="pagetop">        
+        <div id="wrapper">
+            <Sidebar />
+            <div id="content-wrapper" className="d-flex flex-column">               
+                <div id="content">
+                    <Navbar />
+                    <div className="container-fluid">
+                        <ServiceRequest/>
+                    </div>
+                </div>
+                <Footer />
+            </div>
         </div>
-    )
+        <a className="scroll-to-top rounded" href="#pagetop">
+            <i className="fas fa-angle-up"></i>
+        </a>
+        <Logout />
+    </div>
+  )
 }
 
 export default ServiceRequests;

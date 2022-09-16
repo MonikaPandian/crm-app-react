@@ -87,7 +87,7 @@ const Sidebar = () => {
 
             {/* <!-- Nav Item - Service Requests --> */}
             <li className="nav-item">
-                <a className="nav-link" href="" onClick={() => navigate("/service-requests")}>
+                <a className="nav-link" onClick={() => navigate("/service-requests")}>
                     <i class="fa-solid fa-server"></i>&nbsp;&nbsp;&nbsp;&nbsp;
                     <span>Service Requests</span>
                 </a>
@@ -96,7 +96,7 @@ const Sidebar = () => {
 
             {/* <!-- Nav Item - Companies --> */}
             <li className="nav-item">
-                <a className="nav-link" href="" onClick={() => navigate("/companies")}>
+                <a className="nav-link" onClick={() => navigate("/companies")}>
                     <i class="fa-solid fa-building"></i>&nbsp;&nbsp;&nbsp;&nbsp;
                     <span>Companies</span>
                 </a>
@@ -105,7 +105,7 @@ const Sidebar = () => {
 
             {/* <!-- Nav Item - Contacts --> */}
             <li className="nav-item">
-                <a className="nav-link" href="" onClick={() => navigate("/contacts")}>
+                <a className="nav-link" onClick={() => navigate("/contacts")}>
                     <i class="fa-solid fa-address-book"></i>&nbsp;&nbsp;&nbsp;&nbsp;
                     <span>Contacts</span>
                 </a>
