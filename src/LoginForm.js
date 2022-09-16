@@ -26,7 +26,7 @@ const LoginForm = () => {
                 <TextField onChange=""
                     label="password" className="login-text-password" variant="standard" />
                 <Button className="login-button" 
-                    variant="contained" onClick={()=>{navigate("/new")}}>Login</Button>
+                    variant="contained" onClick={()=>{navigate("/dashboard")}}>Login</Button>
                 <p className='sign-up-text'>Don't have an account ? <a href="">Sign Up</a></p>
 
             </div>

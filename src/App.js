@@ -8,16 +8,16 @@ import Tasks from './Tasks';
 import ServiceRequests from './ServiceRequests';
 import Companies from './Companies';
 import Contacts from './Contacts';
-
 import AddCustomers from './AddCustomers';
 import AddLeads from './AddLeads';
+import Dashboard from './Dashboard';
 
 function App() {
   return (
     <div>
       <Routes>
         <Route path="/" element={<LoginForm />} />
-        <Route path="/new" element={<New />} />
+        <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/customers" element={<Customers />} />
         <Route path="/add-customer" element={<AddCustomers />} />
         <Route path="/leads" element={<Leads />} />
