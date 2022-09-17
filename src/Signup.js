@@ -15,9 +15,13 @@ const Signup = () => {
     return (
         <div className='login-page'>
             {/* <!-- As a heading --> */}
-            <nav className="navbar bg-primary">
-                <div className="container-fluid">
-                    <span className="navbar-brand mb-0 h1">CRM Application</span>
+            <nav class="navbar bg-primary">
+                <div class="container-fluid">
+                    <a class="navbar-brand text-white">CRM Application</a>
+                    <form class="d-flex" role="search">
+                        <button onClick={()=>navigate("/login")} class="btn btn-light" type="submit">Login</button>&nbsp;
+                        <button onClick={()=>navigate("/signup")} class="btn btn-light" type="submit">Signup</button>
+                    </form>
                 </div>
             </nav>
 

@@ -12,24 +12,28 @@ const LoginForm = () => {
     const [password, setPassword] = useState("")
 
     return (
-        <div className='login-page'>
+        <div>
             {/* <!-- As a heading --> */}
-            <nav className="navbar bg-primary">
-                <div className="container-fluid">
-                    <span className="navbar-brand mb-0 h1">CRM Application</span>
+            <nav class="navbar bg-primary">
+                <div class="container-fluid">
+                    <a class="navbar-brand text-white">CRM Application</a>
+                    <form class="d-flex" role="search">
+                        <button onClick={()=>navigate("/login")} class="btn btn-light" type="submit">Login</button>&nbsp;
+                        <button onClick={()=>navigate("/signup")} class="btn btn-light" type="submit">Signup</button>
+                    </form>
                 </div>
-            </nav>
+            </nav>           
 
             <div className="login">
                 <h4>Please sign in to continue</h4>
                 <TextField className="login-text-first-name" onChange={(event) => setFirstName(event.target.value)}
-                    label="First name" variant="standard" />
+                    label="First name" value={firstName} variant="standard" />
                 <TextField onChange={(event) => setLastName(event.target.value)}
-                    label="Last name" className="login-text-password" variant="standard" />
+                    label="Last name" value={lastName} className="login-text-password" variant="standard" />
                 <TextField className="login-text-email" onChange={(event) => setEmail(event.target.value)}
-                    label="Email" variant="standard" />
+                    label="Email" value={email} variant="standard" />
                 <TextField onChange={(event) => setPassword(event.target.value)}
-                    label="password" className="login-text-password" variant="standard" />
+                    label="password" value={password} className="login-text-password" variant="standard" />
                 <Button className="login-button"
                     variant="contained" onClick={() => {
                         const employeeFromDB = {
