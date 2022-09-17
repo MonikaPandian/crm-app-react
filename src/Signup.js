@@ -24,13 +24,13 @@ const Signup = () => {
             <div className="login">
                 <h4>Welcome to CRM</h4>
                 <TextField className="login-text-first-name" onChange={(event) => setFirstName(event.target.value)}
-                    label="First name" variant="standard" />
+                    label="First name" value={firstName} variant="standard" />
                 <TextField onChange={(event) => setLastName(event.target.value)}
-                    label="Last name" className="login-text-password" variant="standard" />
+                    label="Last name" value={lastName} className="login-text-password" variant="standard" />
                 <TextField className="login-text-email" onChange={(event) => setEmail(event.target.value)}
-                    label="Email" variant="standard" />
+                    label="Email" value={email} variant="standard" />
                 <TextField onChange={(event) => setPassword(event.target.value)}
-                    label="password" className="login-text-password" variant="standard" />
+                    label="password" value={password} className="login-text-password" variant="standard" />
                 <Button className="login-button" 
                     variant="contained" onClick={() => {
                         const newEmployee = {
@@ -55,9 +55,10 @@ const Signup = () => {
                         if(data.message == "Password pattern does not match"){
                             window.alert("Password pattern does not match. Password should contain atleast one uppercase, lowercase, symbol and number")
                         }
-                        if(data.acknowledged == true )
+                        if(data.acknowledged == true ){
                             window.alert("Account created Successfully!!!")
-                            navigate("/login")                                                
+                            navigate("/login")         
+                        }                                       
                     })                                                                            
                       }} >Create an account</Button>
                 <p className='sign-up-text'>Already have an account ? <a style={{textDecoration:"underline",color:"blue"}} onClick={()=>{navigate("/")}}>Sign In</a></p>
