@@ -26,15 +26,15 @@ const LoginForm = () => {
 
             <div className="login">
                 <h4>Please sign in to continue</h4>
-                <TextField className="login-text-first-name" onChange={(event) => setFirstName(event.target.value)}
+                <TextField required className="login-text-first-name" onChange={(event) => setFirstName(event.target.value)}
                     label="First name" value={firstName} variant="standard" />
-                <TextField onChange={(event) => setLastName(event.target.value)}
+                <TextField required onChange={(event) => setLastName(event.target.value)}
                     label="Last name" value={lastName} className="login-text-password" variant="standard" />
-                <TextField className="login-text-email" onChange={(event) => setEmail(event.target.value)}
+                <TextField required className="login-text-email" onChange={(event) => setEmail(event.target.value)}
                     label="Email" value={email} variant="standard" />
-                <TextField onChange={(event) => setPassword(event.target.value)}
+                <TextField required type="password" onChange={(event) => setPassword(event.target.value)}
                     label="password" value={password} className="login-text-password" variant="standard" />
-                <Button className="login-button"
+                <Button className="login-button" 
                     variant="contained" onClick={() => {
                         const employeeFromDB = {
                             firstName: firstName,
