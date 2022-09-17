@@ -1,7 +1,6 @@
 import './App.css';
 import { Routes, Route } from "react-router-dom";
 import LoginForm from './LoginForm';
-import New from './New';
 import Customers from './Customers';
 import Leads from './Leads';
 import Tasks from './Tasks';
@@ -11,12 +10,15 @@ import Contacts from './Contacts';
 import AddCustomers from './AddCustomers';
 import AddLeads from './AddLeads';
 import Dashboard from './Dashboard';
+import Signup from './Signup';
 
 function App() {
   return (
     <div>
       <Routes>
         <Route path="/" element={<LoginForm />} />
+        <Route path="/login" element={<LoginForm />} />
+        <Route path="/signup" element={<Signup />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/customers" element={<Customers />} />
         <Route path="/add-customer" element={<AddCustomers />} />
@@ -27,7 +29,6 @@ function App() {
         <Route path="/companies" element={<Companies />} />
         <Route path="/contacts" element={<Contacts />} />
       </Routes>
-
     </div>
   );
 }
