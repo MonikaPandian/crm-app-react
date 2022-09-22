@@ -6,9 +6,9 @@ import { useNavigate } from 'react-router-dom';
 const LoginForm = () => {
 
     const navigate = useNavigate();
+    const [username, setUsername] = useState("")
     const [firstName, setFirstName] = useState("")
-    const [lastName, setLastName] = useState("")
-    const [email, setEmail] = useState("")
+    const [lastName, setLastName] = useState("")   
     const [password, setPassword] = useState("")
 
     return (
@@ -26,8 +26,8 @@ const LoginForm = () => {
 
             <div className="login">
                 <h4>Please sign in to continue</h4>
-                <TextField required className="login-text-email" onChange={(event) => setEmail(event.target.value)}
-                    label="Email" value={email} variant="standard" />
+                <TextField required className="login-text-email" onChange={(event) => setUsername(event.target.value)}
+                    label="Email" value={username} variant="standard" />
                 <TextField required className="login-text-first-name" onChange={(event) => setFirstName(event.target.value)}
                     label="First name" value={firstName} variant="standard" />
                 <TextField required onChange={(event) => setLastName(event.target.value)}
@@ -37,9 +37,9 @@ const LoginForm = () => {
                 <Button className="login-button" 
                     variant="contained" onClick={() => {
                         const employeeFromDB = {
+                            username: username,
                             firstName: firstName,
-                            lastName: lastName,
-                            email: email,
+                            lastName: lastName,                          
                             password: password
                         };
                         fetch("https://customer-relation-manage-app.herokuapp.com/employees/login", {
