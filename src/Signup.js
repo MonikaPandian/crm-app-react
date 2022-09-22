@@ -5,12 +5,11 @@ import { useNavigate } from 'react-router-dom';
 
 const Signup = () => {
 
-    const navigate = useNavigate();
+    const navigate = useNavigate();  
+    const [username, setUsername] = useState("")
     const [firstName, setFirstName] = useState("")
     const [lastName, setLastName] = useState("")
-    const [email, setEmail] = useState("")
     const [password,setPassword] = useState("")
-
 
     return (
         <div className='login-page'>
@@ -27,20 +26,20 @@ const Signup = () => {
 
             <div className="login">
                 <h4>Welcome to CRM</h4>
+                <TextField required className="login-text-email" onChange={(event) => setUsername(event.target.value)}
+                    label="Email" value={username} variant="standard" />
                 <TextField required className="login-text-first-name" onChange={(event) => setFirstName(event.target.value)}
                     label="First name" value={firstName} variant="standard" />
                 <TextField required onChange={(event) => setLastName(event.target.value)}
-                    label="Last name" value={lastName} className="login-text-password" variant="standard" />
-                <TextField required className="login-text-email" onChange={(event) => setEmail(event.target.value)}
-                    label="Email" value={email} variant="standard" />
+                    label="Last name" value={lastName} className="login-text-password" variant="standard" />                
                 <TextField  required type="password" onChange={(event) => setPassword(event.target.value)}
                     label="password" value={password} className="login-text-password" variant="standard" />
                 <Button className="login-button" 
                     variant="contained" onClick={() => {
-                        const newEmployee = {
+                        const newEmployee = {                         
+                          username: username,
                           firstName: firstName,
                           lastName:lastName,
-                          email: email,
                           password:password       
                         };
                       

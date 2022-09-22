@@ -14,10 +14,10 @@ const LoginForm = () => {
     return (
         <div>
             {/* <!-- As a heading --> */}
-            <nav class="navbar bg-primary">
-                <div class="container-fluid">
-                    <a class="navbar-brand text-white">CRM Application</a>
-                    <form class="d-flex" role="search">
+            <nav className="navbar bg-primary">
+                <div className="container-fluid">
+                    <a className="navbar-brand text-white">CRM Application</a>
+                    <form className="d-flex" role="search">
                         <button onClick={()=>navigate("/login")} class="btn btn-light" type="submit">Login</button>&nbsp;
                         <button onClick={()=>navigate("/signup")} class="btn btn-light" type="submit">Signup</button>
                     </form>
@@ -26,12 +26,12 @@ const LoginForm = () => {
 
             <div className="login">
                 <h4>Please sign in to continue</h4>
+                <TextField required className="login-text-email" onChange={(event) => setEmail(event.target.value)}
+                    label="Email" value={email} variant="standard" />
                 <TextField required className="login-text-first-name" onChange={(event) => setFirstName(event.target.value)}
                     label="First name" value={firstName} variant="standard" />
                 <TextField required onChange={(event) => setLastName(event.target.value)}
-                    label="Last name" value={lastName} className="login-text-password" variant="standard" />
-                <TextField required className="login-text-email" onChange={(event) => setEmail(event.target.value)}
-                    label="Email" value={email} variant="standard" />
+                    label="Last name" value={lastName} className="login-text-password" variant="standard" />  
                 <TextField required type="password" onChange={(event) => setPassword(event.target.value)}
                     label="password" value={password} className="login-text-password" variant="standard" />
                 <Button className="login-button" 

@@ -11,6 +11,8 @@ import AddCustomers from './AddCustomers';
 import AddLeads from './AddLeads';
 import Dashboard from './Dashboard';
 import Signup from './Signup';
+import  EditCust from "./EditCust";
+import DeleteCust from './DeleteCust';
 
 function App() {
   return (
@@ -22,6 +24,8 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/customers" element={<Customers />} />
         <Route path="/add-customer" element={<AddCustomers />} />
+        <Route path="/edit-customer/:id" element={<EditCust />} />
+        <Route path="/delete-customer/:id" element={<DeleteCust />} />
         <Route path="/leads" element={<Leads />} />
         <Route path="/add-lead" element={<AddLeads />} />
         <Route path="/tasks" element={<Tasks />} />        

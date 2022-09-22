@@ -1,11 +1,11 @@
 import React from 'react';
-import Customer from './Customer';
 import Footer from './Footer';
 import Logout from './Logout';
 import Navbar from './Navbar';
 import Sidebar from './Sidebar';
+import DeleteCustomer from './DeleteCustomer';
 
-const Customers = () => {
+const EditCust = () => {
     
   return (
     <div id="pagetop">        
@@ -15,7 +15,7 @@ const Customers = () => {
                 <div id="content">
                     <Navbar />
                     <div className="container-fluid">
-                        <Customer/>
+                        <DeleteCustomer/>
                     </div>
                 </div>
                 <Footer />
@@ -29,4 +29,5 @@ const Customers = () => {
   )
 }
 
-export default Customers;
+export default EditCust;
+

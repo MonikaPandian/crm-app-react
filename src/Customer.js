@@ -47,10 +47,10 @@ const Customer = () => {
                                 <td>{cust.type}</td>
                                 <td>{cust.joined}</td>
                                 <td>{cust.status}</td>
-                                <td><IconButton onClick="" color="secondary">
+                                <td><IconButton onClick={()=>{navigate(`/edit-customer/${cust.id}`)}} color="secondary">
                                     <EditIcon />
                                 </IconButton>
-                                    <IconButton onClick="" color="error">
+                                    <IconButton onClick={()=>{navigate(`/delete-customer/${cust.id}`)}} color="error">
                                         <DeleteIcon />
                                     </IconButton></td>
                             </tr>)
