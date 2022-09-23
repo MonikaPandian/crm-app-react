@@ -8,7 +8,7 @@ const LoginForm = () => {
     const navigate = useNavigate();
     const [username, setUsername] = useState("")
     const [firstName, setFirstName] = useState("")
-    const [lastName, setLastName] = useState("")   
+    const [lastName, setLastName] = useState("")
     const [password, setPassword] = useState("")
 
     return (
@@ -18,28 +18,30 @@ const LoginForm = () => {
                 <div className="container-fluid">
                     <a className="navbar-brand text-white">CRM Application</a>
                     <form className="d-flex" role="search">
-                        <button onClick={()=>navigate("/login")} class="btn btn-light" type="submit">Login</button>&nbsp;
-                        <button onClick={()=>navigate("/signup")} class="btn btn-light" type="submit">Signup</button>
+                        <button onClick={() => navigate("/login")} className="btn btn-light" type="submit">Login</button>&nbsp;
+                        <button onClick={() => navigate("/signup")} className="btn btn-light" type="submit">Signup</button>
                     </form>
                 </div>
-            </nav>           
+            </nav>
 
             <div className="login">
-                <h4>Please sign in to continue</h4>
+                <h4 className='heading-text'>Please sign in to continue</h4>
                 <TextField required className="login-text-email" onChange={(event) => setUsername(event.target.value)}
                     label="Email" value={username} variant="standard" />
-                <TextField required className="login-text-first-name" onChange={(event) => setFirstName(event.target.value)}
+                <TextField required className="login-text-fname" onChange={(event) => setFirstName(event.target.value)}
                     label="First name" value={firstName} variant="standard" />
                 <TextField required onChange={(event) => setLastName(event.target.value)}
-                    label="Last name" value={lastName} className="login-text-password" variant="standard" />  
+                    label="Last name" value={lastName} className="login-text-lname" variant="standard" />
                 <TextField required type="password" onChange={(event) => setPassword(event.target.value)}
                     label="password" value={password} className="login-text-password" variant="standard" />
-                <Button className="login-button" 
+                <p className='forgot-password-text'><a style={{ textDecoration: "underline", color: "blue" }} onClick={() => { navigate("/password-reset") }}>Forgot Password ?</a></p>
+
+                <Button className="login-button"
                     variant="contained" onClick={() => {
                         const employeeFromDB = {
                             username: username,
                             firstName: firstName,
-                            lastName: lastName,                          
+                            lastName: lastName,
                             password: password
                         };
                         fetch("https://customer-relation-manage-app.herokuapp.com/employees/login", {

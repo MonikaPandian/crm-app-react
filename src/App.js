@@ -13,6 +13,7 @@ import Dashboard from './Dashboard';
 import Signup from './Signup';
 import  EditCust from "./EditCust";
 import DeleteCust from './DeleteCust';
+import ForgotPassword from './ForgotPassword';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/" element={<LoginForm />} />
         <Route path="/login" element={<LoginForm />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/password-reset" element={<ForgotPassword />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/customers" element={<Customers />} />
         <Route path="/add-customer" element={<AddCustomers />} />

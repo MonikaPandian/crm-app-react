@@ -5,7 +5,7 @@
 .login{
   margin-top:4%; 
   margin-left:35%; 
-  height:500px;
+  height:530px;
   width:375px;
   border:1px solid black;
   display:flex;
@@ -16,26 +16,40 @@
 }
 
 .login-button{
- margin-top: 20px !important;  
+ margin-top: 10px !important;  
  margin-bottom: 30px !important;
 }
 
-.login-text-first-name{
-  margin-bottom:30px !important;
-  margin-top:10px!important;
- 
+.login-text-fname{
+  margin-bottom:30px !important; 
 }
+
+.login-text-lname{
+  margin-bottom:30px !important; 
+}
+
 .login-text-email{
+  margin-top:10px!important;
   margin-bottom:30px !important;
  
 }
 .login-text-password{
-  margin-bottom:30px !important;
+  margin-bottom:10px !important;
 }
 .sign-up-text{
   font-size: large;
+  margin-top: 10px;
 }
 
+.sign-in-text{
+  font-size: large;
+  margin-top: 30px;
+}
+
+.signup-button{
+  margin-top:40px !important;
+}
+  
 .add-user{
   display: flex;
   flex-direction: column;
@@ -49,3 +63,26 @@
   margin-top:30px !important;
   width:200px;
 }
+
+.heading-text{
+  color: blue;
+}
+
+.forgot-password-text{
+  font-size: medium;
+  margin-left: 180px;
+}
+
+.forgot-password{
+  margin-top:7%; 
+  margin-left:35%; 
+  height:250px;
+  width:400px;
+  border:1px solid black;
+  display:flex;
+  flex-direction: column;
+  padding: 10px;
+  text-align: center;
+  border-radius: 2%;
+}
+

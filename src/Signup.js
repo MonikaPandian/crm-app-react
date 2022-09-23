@@ -25,16 +25,16 @@ const Signup = () => {
             </nav>
 
             <div className="login">
-                <h4>Welcome to CRM</h4>
+                <h4 className='heading-text'>Welcome to CRM</h4>
                 <TextField required className="login-text-email" onChange={(event) => setUsername(event.target.value)}
                     label="Email" value={username} variant="standard" />
-                <TextField required className="login-text-first-name" onChange={(event) => setFirstName(event.target.value)}
+                <TextField required className="login-text-fname" onChange={(event) => setFirstName(event.target.value)}
                     label="First name" value={firstName} variant="standard" />
                 <TextField required onChange={(event) => setLastName(event.target.value)}
-                    label="Last name" value={lastName} className="login-text-password" variant="standard" />                
+                    label="Last name" value={lastName} className="login-text-lname" variant="standard" />                
                 <TextField  required type="password" onChange={(event) => setPassword(event.target.value)}
                     label="password" value={password} className="login-text-password" variant="standard" />
-                <Button className="login-button" 
+                <Button className="signup-button" 
                     variant="contained" onClick={() => {
                         const newEmployee = {                         
                           username: username,
@@ -64,7 +64,7 @@ const Signup = () => {
                         }                                       
                     })                                                                            
                       }} >Create an account</Button>
-                <p className='sign-up-text'>Already have an account ? <a style={{textDecoration:"underline",color:"blue"}} onClick={()=>{navigate("/")}}>Sign In</a></p>
+                <p className='sign-in-text'>Already have an account ? <a style={{textDecoration:"underline",color:"blue"}} onClick={()=>{navigate("/")}}>Sign In</a></p>
 
             </div>
         </div>
