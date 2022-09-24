@@ -86,3 +86,21 @@
   border-radius: 2%;
 }
 
+.otp{
+  display:flex;
+  flex-direction: column;
+}
+
+.reset-password{
+  margin-top:8%; 
+  margin-left:35%; 
+  height:300px;
+  width:375px;
+  border:1px solid black;
+  display:flex;
+  flex-direction: column;
+  padding: 10px;
+  text-align: center;
+  border-radius: 2%;
+}
+

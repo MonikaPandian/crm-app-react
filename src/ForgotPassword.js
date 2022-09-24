@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 const ForgotPassword = () => {
     const navigate = useNavigate();
     const [username, setUsername] = useState("")
-   
+      
     return (
         <div>
             {/* <!-- As a heading --> */}
@@ -14,8 +14,8 @@ const ForgotPassword = () => {
                 <div className="container-fluid">
                     <a className="navbar-brand text-white">CRM Application</a>
                     <form className="d-flex" role="search">
-                        <button onClick={()=>navigate("/login")} class="btn btn-light" type="submit">Login</button>&nbsp;
-                        <button onClick={()=>navigate("/signup")} class="btn btn-light" type="submit">Signup</button>
+                        <button onClick={()=>navigate("/login")} className="btn btn-light" type="submit">Login</button>&nbsp;
+                        <button onClick={()=>navigate("/signup")} className="btn btn-light" type="submit">Signup</button>
                     </form>
                 </div>
             </nav>           
@@ -37,16 +37,16 @@ const ForgotPassword = () => {
                             }
                         })
                             .then((data) => data.json())
-                            .then((data) => { console.log(data)
-                                // if (data.message == "success") {
-                                //    window.alert("Please check your mail to find otp")
-                                // }
-                                // else {
-                                //     window.alert("Please check your username and password. If new user please sign up to create an account")
-                                // }
+                            .then((data) => { 
+                                if (data.message == "success") {
+                                   window.alert("success!! Password reset link has been sent to your mail")                                
+                                } 
+                                else {
+                                    window.alert("Please enter valid and registered email ID")
+                                }
                             })
 
-                    }}>Send password reset email</Button>                  
+                    }}>Send password reset email</Button>                                                                                                              
             </div>
         </div>
     )
