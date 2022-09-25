@@ -25,7 +25,7 @@ function App() {
         <Route path="/login" element={<LoginForm />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
-        <Route path="/reset-password/:id/:token" element={<ResetPassword />} />
+        <Route path="http://crm-application/reset-password/:id/:token" element={<ResetPassword />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/customers" element={<Customers />} />
         <Route path="/add-customer" element={<AddCustomers />} />
