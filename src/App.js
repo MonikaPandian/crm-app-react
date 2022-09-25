@@ -15,6 +15,7 @@ import  EditCust from "./EditCust";
 import DeleteCust from './DeleteCust';
 import ForgotPassword from './ForgotPassword';
 import ResetPassword from './ResetPassword';
+import API from './global';
 
 function App() {
   return (
@@ -24,7 +25,7 @@ function App() {
         <Route path="/login" element={<LoginForm />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
-        <Route path="/employees/reset-password/:id/:token" element={<ResetPassword />} />
+        <Route path="/reset-password/:id/:token" element={<ResetPassword />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/customers" element={<Customers />} />
         <Route path="/add-customer" element={<AddCustomers />} />
