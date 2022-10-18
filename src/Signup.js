@@ -24,7 +24,7 @@ const Signup = () => {
                 </div>
             </nav>
 
-            <div className="login">
+            <div className="signup-form">
                 <h4 className='heading-text'>Welcome to CRM</h4>
                 <TextField required className="login-text-email" onChange={(event) => setUsername(event.target.value)}
                     label="Email" value={username} variant="standard" />

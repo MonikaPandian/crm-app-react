@@ -3,9 +3,22 @@
 }
 
 .login{
-  margin-top:4%; 
+  margin-top:5%; 
   margin-left:35%; 
-  height:530px;
+  height:350px;
+  width:375px;
+  border:1px solid black;
+  display:flex;
+  flex-direction: column;
+  padding: 10px;
+  text-align: center;
+  border-radius: 2%;
+}
+
+.signup-form{
+  margin-top:5%; 
+  margin-left:35%; 
+  height:500px;
   width:375px;
   border:1px solid black;
   display:flex;
@@ -17,7 +30,7 @@
 
 .login-button{
  margin-top: 10px !important;  
- margin-bottom: 30px !important;
+ margin-bottom: 20px !important;
 }
 
 .login-text-fname{
@@ -38,7 +51,6 @@
 }
 .sign-up-text{
   font-size: large;
-  margin-top: 10px;
 }
 
 .sign-in-text{
