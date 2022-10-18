@@ -25,9 +25,9 @@ const ResetPassword = () => {
 
             <div className="reset-password">
                 <h4 className='heading-text'>Reset your password</h4>
-                <TextField required className="login-text-email" onChange={(event) => setNewPassword(event.target.value)}
+                <TextField required type="password" className="login-text-email" onChange={(event) => setNewPassword(event.target.value)}
                     label="New Password" value={newPassword} variant="standard" />
-                <TextField required className="login-text-fname" onChange={(event) => setConfirmPassword(event.target.value)}
+                <TextField required type="password" className="login-text-fname" onChange={(event) => setConfirmPassword(event.target.value)}
                     label="Confirm Password " value={confirmPassword} variant="standard" />               
 
                 <Button className="login-button"
@@ -52,6 +52,7 @@ const ResetPassword = () => {
                             .then((data) => {
                                 if(data.message == "Password successfully reset"){
                                     window.alert("Password successfully reset")
+                                    navigate('/login')
                                 }
                                 else if(data.message == "Token expired"){
                                     window.alert("Token expired")
